@@ -1,0 +1,5 @@
+SELECT nh_video.video_id, video_title, video_lenght, video_url, 
+reviewer_name, reviewer_rating AS Rating_Scale, reviewer_desc AS short_description
+FROM nh_video
+FULL OUTER JOIN nh_videoreviews ON nh_videoreviews.video_id = nh_video.video_id
+ORDER BY nh_videoreviews.reviewer_rating ASC;
