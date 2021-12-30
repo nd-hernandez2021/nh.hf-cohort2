@@ -1,0 +1,42 @@
+while True:
+    player_one = ('Nelson')
+    player_two = ('Odessa')
+    game_choices = ['Rock', 'Paper', 'Scissor']
+    
+    message = 'Welcome ' + player_one + ' and ' + player_two + ' Lets Play Rock, Paper, Scissor\n'
+    print (message)
+    
+    player_one_choice = input(str(player_one) + ': Enter your choice ' + str(game_choices) +'\n\t' 'You chose: ').lower()
+    player_two_choice = input(str(player_two) + ': Enter your choice ' + str(game_choices) +'\n\t' 'You chose: ').lower()
+    
+        #Rules: Rock beats Scissor, Paper beats Rock, Scissor beats Paper#
+        #Input for each player of selected game_shoice, is not case sensitive#
+        #Input for play_another_round by a player is not case sensitive#
+
+    if player_one_choice == player_two_choice:
+        print ('*It is a tie - ' + player_one + ' & ' + player_two + ' Chose the same - Try Again*\n')
+
+    elif player_one_choice == 'rock':
+        if player_two_choice == 'scissor':
+            print ('*Rock Beats Scissor - ' + player_one + ' Wins!! Congratulations*\n')
+        else: 
+            print ('*Paper Beats Rock - ' + player_two + ' Wins!! Congratulations*\n')
+
+    elif player_one_choice == 'paper':
+        if player_two_choice == 'rock':
+            print ('*Paper Beats Rock - ' + player_one + ' Wins!! Congratulations*\n')
+        else:
+            print ('*Scissor Beats Paper ' + player_two + ' Wins!! Congratulations*\n')
+
+    elif player_one_choice == 'scissor':
+        if player_two_choice == 'paper':
+            print ('*Siccor Beats Paper - ' + player_one + ' Wins!! Congratulations*\n')
+        else:
+            print ('*Rock Beats Scissor - ' + player_two + ' Wins!! Congratulations*\n')
+            
+    play_another_round = input ('Play Again? (Yes/No): ').lower()
+    if play_another_round != 'yes':
+        print ('\tGame has Ended - Come play again soon!!\n')
+        break
+    else:
+        print ('\tLets Play Again!!\n')
